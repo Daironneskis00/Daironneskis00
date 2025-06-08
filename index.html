@@ -1,37 +1,130 @@
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Seguros que te protegen. Siempre.</h1>
-    <p>Más de 100 años asesorando comunidades, pymes y familias.</p>
-    <button onclick="mostrarContacto()">Calcula tu seguro en 1 minuto</button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grupo Dairon Neskis | Soluciones Integrales en Gestión y Seguros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f5f8fd;
+      color: #202b38;
+    }
+    header {
+      background: #0c3c60;
+      color: #fff;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-container img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('fondo-empresa.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #0c3c60;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #d0e3f0;
+      padding-bottom: .4rem;
+      margin-bottom: 1rem;
+    }
+    .contacto {
+      background: #0c3c60;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 14px;
+      text-align: center;
+    }
+    .contacto a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Dairon Neskis">
+      <div class="logo-text">Grupo Dairon Neskis</div>
+    </div>
+    <nav>
+      <a href="#empresa">La Empresa</a>
+      <a href="#servicios">Qué Hacemos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Comprometidos con tu tranquilidad y tu comunidad</h1>
+    <p>Somos una marca profesional con visión empresarial, especializada en la administración de comunidades, asesoría empresarial y seguros personalizados como agentes exclusivos de Ocaso.</p>
+  </section>
+
+  <div class="container">
+    <section id="empresa" class="section">
+      <h2>¿Quiénes Somos?</h2>
+      <p>Grupo Dairon Neskis administrador de comunidades de propietarios y pymes. Nuestra misión es aportar soluciones eficientes, transparentes y personalizadas a cada cliente. Nos destacamos por nuestra atención profesional, cercanía con el cliente y compromiso total con los resultados.</p>
+    </section>
+
+    <section id="servicios" class="section">
+      <h2>Qué Hacemos</h2>
+      <p>Ofrecemos un servicio integral que abarca:</p>
+      <ul>
+        <li><strong>Gestión de Comunidades:</strong> Administración legal, económica y técnica de fincas y edificios.</li>
+        <li><strong>Asesoría a PYMES:</strong> Gestión documental, proveedores, y seguimiento de mantenimiento y contratos.</li>
+        <li><strong>Seguros Exclusivos:</strong> Como agente exclusivo de <strong>Ocaso Seguros</strong>, ofrecemos seguros de decesos, hogar, vida, salud, ahorro, viajes, empresas y más.</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <div class="contacto">
+        <p><strong>Email:</strong> <a href="mailto:neskisgs@gmail.com">neskisgs@gmail.com</a><br>
+        <strong>Teléfono:</strong> <a href="tel:+34684357021">684 357 021</a></p>
+        <p>Escríbenos para recibir asesoramiento personalizado o solicitar una propuesta sin compromiso.</p>
+      </div>
+    </section>
   </div>
-</section>
-
-<!-- Grid Servicios -->
-<section class="grid-servicios">
-  <div class="servicio-card"><img src="icon-hogar.png"><h4>Hogar</h4></div>
-  <div class="servicio-card"><img src="icon-decesos.png"><h4>Decesos</h4></div>
-  <!-- ...otros seguros... -->
-</section>
-
-<!-- Por qué elegirnos -->
-<section class="valores">
-  <div class="valor"><h5>Confianza</h5><p>9 de cada 10 clientes recomiendan nuestros servicios.</p></div>
-  <div class="valor"><h5>Experiencia</h5><p>180 h certificadas y asesoría profesional.</p></div>
-  <div class="valor"><h5>Cercanía</h5><p>Atención personalizada para cada cliente.</p></div>
-</section>
-
-<!-- Contacto desplegable -->
-<section id="seccion-contacto" class="contacto-section">
-  <h2>Contacto</h2>
-  <div id="contacto-box" class="contacto-box">
-    <form>
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Teléfono" required>
-      <button type="submit">Solicita llamada</button>
-    </form>
-    <p>O llámanos directamente al <strong>684 357 021</strong></p>
-  </div>
-</section>
-
+</body>
+</html>
