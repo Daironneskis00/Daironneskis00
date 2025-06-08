@@ -6,15 +6,19 @@
   <title>Grupo Dairon Neskis | Soluciones Integrales en Gestión y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --azul-oscuro: #0c3c60;
+      --blanco: #ffffff;
+    }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #f5f8fd;
-      color: #202b38;
+      background: var(--blanco);
+      color: var(--azul-oscuro);
     }
     header {
-      background: #0c3c60;
-      color: #fff;
+      background: var(--azul-oscuro);
+      color: var(--blanco);
       padding: 1.5rem;
       display: flex;
       justify-content: space-between;
@@ -25,8 +29,8 @@
       align-items: center;
     }
     .logo-container img {
-      height: 60px;
-      margin-right: 15px;
+      height: 80px;
+      margin-right: 20px;
     }
     .logo-text {
       font-size: 2rem;
@@ -45,7 +49,7 @@
       margin-left: 2rem;
     }
     nav ul.menu li a {
-      color: #fff;
+      color: var(--blanco);
       text-decoration: none;
       padding: 1rem;
       display: block;
@@ -58,14 +62,14 @@
       display: none;
       position: absolute;
       top: 100%;
-      background-color: #fff;
+      background-color: var(--blanco);
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       border-radius: 0 0 8px 8px;
       overflow: hidden;
       z-index: 10;
     }
     .submenu li a {
-      color: #0c3c60;
+      color: var(--azul-oscuro);
       padding: 0.8rem 1.2rem;
       white-space: nowrap;
     }
@@ -73,8 +77,8 @@
       background-color: #f0f4ff;
     }
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('fondo-empresa.jpg') no-repeat center center/cover;
-      color: white;
+      background: var(--blanco);
+      color: var(--azul-oscuro);
       padding: 5rem 2rem;
       text-align: center;
     }
@@ -91,42 +95,53 @@
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
+      background-color: var(--blanco);
     }
     .section {
       margin-bottom: 3rem;
     }
     h2 {
-      color: #0c3c60;
+      color: var(--azul-oscuro);
       font-size: 1.8rem;
       border-bottom: 2px solid #d0e3f0;
       padding-bottom: .4rem;
       margin-bottom: 1rem;
     }
     .contacto {
-      background: #0c3c60;
-      color: #fff;
+      background: var(--azul-oscuro);
+      color: var(--blanco);
       padding: 2rem;
       border-radius: 14px;
       text-align: center;
     }
     .contacto a {
-      color: #fff;
+      color: var(--blanco);
       text-decoration: underline;
       font-weight: 600;
+    }
+    .seguro {
+      margin-top: 2rem;
+      padding: 1.2rem;
+      background: #f5f8fd;
+      border-left: 4px solid var(--azul-oscuro);
+      border-radius: 8px;
+    }
+    .seguro h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="Logo Dairon Neskis" style="height: 80px; margin-right: 20px;">
+      <img src="logo.png" alt="Logo Dairon Neskis">
       <div class="logo-text">Grupo Dairon Neskis</div>
     </div>
     <nav>
       <ul class="menu">
         <li><a href="#empresa">La Empresa</a></li>
         <li class="dropdown">
-          <a href="#">Seguros ▾</a>
+          <a href="#seguros">Seguros ▾</a>
           <ul class="submenu">
             <li><a href="#hogar">Hogar</a></li>
             <li><a href="#decesos">Decesos</a></li>
@@ -152,17 +167,47 @@
   <div class="container">
     <section id="empresa" class="section">
       <h2>¿Quiénes Somos?</h2>
-      <p>Grupo Dairon Neskis administrador de comunidades de propietarios y pymes. Nuestra misión es aportar soluciones eficientes, transparentes y personalizadas a cada cliente. Nos destacamos por nuestra atención profesional, cercanía con el cliente y compromiso total con los resultados.</p>
+      <p>Grupo Dairon Neskis administra comunidades de propietarios y pymes. Nuestra misión es aportar soluciones eficientes, transparentes y personalizadas. Nos destacamos por nuestra atención profesional, cercanía con el cliente y compromiso total con los resultados.</p>
     </section>
 
-    <section id="servicios" class="section">
-      <h2>Qué Hacemos</h2>
-      <p>Ofrecemos un servicio integral que abarca:</p>
-      <ul>
-        <li><strong>Gestión de Comunidades:</strong> Administración legal, económica y técnica de fincas y edificios.</li>
-        <li><strong>Asesoría a PYMES:</strong> Gestión documental, proveedores, y seguimiento de mantenimiento y contratos.</li>
-        <li><strong>Seguros Exclusivos:</strong> Como agente exclusivo de <strong>Ocaso Seguros</strong>, ofrecemos seguros de decesos, hogar, vida, salud, ahorro, viajes, empresas y más.</li>
-      </ul>
+    <section id="seguros" class="section">
+      <h2>Seguros que Ofrecemos</h2>
+      <div id="hogar" class="seguro">
+        <h3>Seguro de Hogar</h3>
+        <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
+      </div>
+      <div id="decesos" class="seguro">
+        <h3>Seguro de Decesos</h3>
+        <p>Tranquilidad para tus seres queridos. Cubre los gastos y gestiones necesarios en caso de fallecimiento.</p>
+      </div>
+      <div id="vida" class="seguro">
+        <h3>Seguro de Vida</h3>
+        <p>Apoyo económico en situaciones de invalidez o fallecimiento, con opciones de ahorro y capital garantizado.</p>
+      </div>
+      <div id="salud" class="seguro">
+        <h3>Seguro de Salud</h3>
+        <p>Accede a una red médica privada con atención rápida, pruebas, tratamientos y hospitalización.</p>
+      </div>
+      <div id="accidentes" class="seguro">
+        <h3>Seguro de Accidentes</h3>
+        <p>Cobertura ante accidentes personales, incluyendo hospitalización, incapacidad temporal o fallecimiento.</p>
+      </div>
+      <div id="ahorro" class="seguro">
+        <h3>Seguro de Ahorro</h3>
+        <p>Planifica tu futuro con soluciones de ahorro que combinan rentabilidad y seguridad.</p>
+      </div>
+      <div id="viajes" class="seguro">
+        <h3>Seguro de Viajes</h3>
+        <p>Disfruta de tus viajes con coberturas de asistencia médica, cancelación, equipaje y más.</p>
+      </div>
+      <div id="empresas" class="seguro">
+        <h3>Seguro para Empresas</h3>
+        <p>Protección para negocios frente a riesgos laborales, daños materiales, responsabilidad civil y otros.</p>
+      </div>
+      <div id="comunidades" class="seguro">
+        <h3>Seguro para Comunidades</h3>
+        <p>Cubre los riesgos comunes de edificios y comunidades de vecinos, como incendios, agua o ascensores.</p>
+      </div>
     </section>
 
     <section id="contacto" class="section">
