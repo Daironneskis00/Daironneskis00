@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dairon Neskis | Soluciones Integrales en Administración y Seguros</title>
+  <title>Grupo Dairon Neskis | Soluciones Integrales en Gestión y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -76,6 +76,41 @@
     }
     .submenu li a:hover {
       background-color: #e8f0ff;
+    }
+    .submenu-form {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: var(--blanco);
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 0 0 10px 10px;
+      z-index: 10;
+      min-width: 250px;
+    }
+    nav ul.menu li:hover .submenu-form {
+      display: block;
+    }
+    .submenu-form input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .submenu-form button {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .submenu-form button:hover {
+      background-color: #0a2f4a;
     }
     .hero {
       background: var(--blanco);
@@ -155,7 +190,17 @@
             <li><a href="#comunidades">Comunidades</a></li>
           </ul>
         </li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li class="dropdown">
+          <a href="#contacto">Contacto ▾</a>
+          <div class="submenu-form">
+            <form>
+              <input type="text" placeholder="Nombre" required>
+              <input type="email" placeholder="Correo electrónico" required>
+              <input type="tel" placeholder="Teléfono" required>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -216,7 +261,7 @@
       <div class="contacto">
         <p><strong>Email:</strong> <a href="mailto:neskisgs@gmail.com">neskisgs@gmail.com</a><br>
         <strong>Teléfono:</strong> <a href="tel:+34684357021">684 357 021</a></p>
-        <p>Escríbenos para recibir asesoramiento personalizado o solicitar una propuesta sin compromiso.</p>
+        <p>Los dos servicios tanta el de seguro como administracion son de forma independiente, para cualquier duda no dude en contactar .</p>
       </div>
     </section>
   </div>
