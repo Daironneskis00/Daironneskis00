@@ -15,147 +15,138 @@
     header {
       background: #165baa;
       color: #fff;
-      padding: 2rem 0 1.3rem 0;
-      text-align: center;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       box-shadow: 0 4px 8px rgba(22,91,170,0.1);
-      position: relative;
     }
-    header img {
-      height: 64px;
-      vertical-align: middle;
-      margin-right: 20px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 0 12px #145192aa);
+    .logo-container {
+      display: flex;
+      align-items: center;
     }
-    .logo {
-      font-size: 2.2rem;
+    .logo-container img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-size: 1.8rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      display: inline-block;
-      vertical-align: middle;
     }
     nav {
-      margin: 1.5rem 0 0 0;
+      margin-top: 0.5rem;
     }
     nav a {
       color: #fff;
-      margin: 0 1.2rem;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.1rem;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       background: #fff;
       border-radius: 24px;
-      padding: 2rem 2.5rem;
+      padding: 2rem;
       box-shadow: 0 2px 16px rgba(22,91,170,0.08);
     }
     h2 {
       color: #165baa;
-      margin-top: 1.8rem;
-      font-size: 1.6rem;
-      border-bottom: 1.5px solid #e3ecfa;
-      padding-bottom: .4rem;
-      font-weight: 700;
-    }
-    ul {
-      margin-top: .5rem;
-      padding-left: 1.1em;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
     .card {
-      background: #f1f6fb;
-      padding: 1.3rem 1.5rem;
-      border-radius: 14px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 1px 8px rgba(22,91,170,0.03);
+      background: #eef4fb;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
     }
     .contacto {
       background: #165baa;
       color: #fff;
-      border-radius: 18px;
       padding: 1.5rem;
       text-align: center;
-      margin-top: 2.2rem;
+      border-radius: 14px;
     }
     .contacto a {
       color: #fff;
       text-decoration: underline;
       font-weight: 600;
     }
-    @media (max-width: 600px) {
-      .container { padding: 1.2rem .8rem; }
-      .logo { font-size: 1.2rem; }
-      h2 { font-size: 1.1rem; }
-      header img { height: 40px; }
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Dairon Neskis">
-    <span class="logo">Dairon Neskis</span>
-    <div>Administrador de Comunidades y Empresas &mdash; Agente Exclusivo de Seguros Ocaso</div>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Dairon Neskis">
+      <div class="logo-text">Dairon Neskis</div>
+    </div>
     <nav>
       <a href="#sobre-mi">Sobre mí</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#servicios">Servicios</a>
+      <a href="#servicios">Seguros</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
+
   <div class="container">
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
       <div class="card">
-        <p>Soy <strong>Dairon Neskis</strong>, profesional con amplia experiencia en la <b>gestión de comunidades, empresas y seguros</b>.<br>
-        Con <strong>180 horas certificadas</strong> en administración de comunidades y pymes, combino conocimientos técnicos, capacidad de resolución de conflictos y vocación de servicio.</p>
-        <p>Actualmente, soy <b>agente exclusivo de seguros Ocaso</b>, ayudando a particulares, comunidades y empresas a proteger lo más importante.</p>
+        <p>Soy <strong>Dairon Neskis</strong>, gestor profesional con 180 horas certificadas en administración de comunidades y pymes. Además, soy <strong>agente exclusivo de seguros Ocaso</strong>, brindando soluciones personalizadas a familias, comunidades y empresas.</p>
       </div>
     </section>
-    <section id="habilidades">
-      <h2>Habilidades Destacadas</h2>
-      <ul>
-        <li>Gestión integral de comunidades de propietarios</li>
-        <li>Administración de pequeñas y medianas empresas</li>
-        <li>Resolución de incidencias y optimización de recursos</li>
-        <li>Elaboración y control de presupuestos</li>
-        <li>Contratación y seguimiento de proveedores y servicios</li>
-        <li>Comunicación efectiva con propietarios, empresas y clientes</li>
-        <li>Comercialización y asesoramiento en seguros Ocaso (decesos, hogar, vida, salud, comunidades, empresas, ahorro, etc.)</li>
-        <li>Asesoría para pymes y autónomos</li>
-      </ul>
-    </section>
+
     <section id="servicios">
-      <h2>Servicios</h2>
+      <h2>Seguros Ocaso</h2>
+
       <div class="card">
-        <ul>
-          <li><b>Gestión y administración de comunidades</b></li>
-          <li><b>Asesoramiento integral a empresas y autónomos</b></li>
-          <li><b>Gestión de incidencias, juntas y mantenimiento</b></li>
-          <li><b>Planificación económica y financiera para comunidades y pymes</b></li>
-          <li><b>Comercialización de seguros Ocaso:</b>
-            <ul>
-              <li>Decesos</li>
-              <li>Hogar</li>
-              <li>Vida</li>
-              <li>Accidentes</li>
-              <li>Salud</li>
-              <li>Ahorro</li>
-              <li>Viajes</li>
-              <li>Empresas y Comunidades</li>
-              <li>Embarcaciones, Cazador, etc.</li>
-            </ul>
-          </li>
-        </ul>
+        <h3>Seguro de Decesos</h3>
+        <p>Cubre todos los gastos asociados al fallecimiento, incluyendo sepelio, trámites y traslados, asegurando tranquilidad a la familia.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Hogar</h3>
+        <p>Protege tu vivienda frente a incendios, robos, daños por agua y responsabilidad civil. Incluye asistencia urgente en el hogar.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Vida</h3>
+        <p>Ofrece cobertura económica a tus seres queridos en caso de fallecimiento o invalidez, con opciones de ahorro a largo plazo.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Accidentes</h3>
+        <p>Protección económica ante accidentes personales con coberturas por hospitalización, incapacidad o fallecimiento.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Salud</h3>
+        <p>Acceso a una red médica privada con especialistas, pruebas y hospitalización, sin listas de espera.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Ahorro</h3>
+        <p>Planes financieros que permiten ahorrar con seguridad y rentabilidad para el futuro, estudios o jubilación.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Viaje</h3>
+        <p>Cobertura integral durante viajes nacionales o internacionales: asistencia médica, cancelaciones, pérdida de equipaje.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguro para Empresas y Comunidades</h3>
+        <p>Protección especializada para negocios y comunidades de propietarios ante daños materiales, responsabilidad civil y más.</p>
       </div>
     </section>
+
     <section id="contacto">
       <h2>Contacto</h2>
       <div class="contacto">
-        <p><b>Email:</b> <a href="mailto:neskisgs@gmail.com">neskisgs@gmail.com</a><br>
-        <b>Teléfono:</b> <a href="tel:+34684357021">684 357 021</a></p>
-        <p>Consulta sin compromiso y descubre cómo puedo ayudarte a mejorar la gestión de tu comunidad, empresa o encontrar el seguro que necesitas.</p>
+        <p><strong>Email:</strong> <a href="mailto:neskisgs@gmail.com">neskisgs@gmail.com</a><br>
+        <strong>Teléfono:</strong> <a href="tel:+34684357021">684 357 021</a></p>
+        <p>Contacta sin compromiso para recibir asesoramiento o contratar el seguro que más se adapte a ti.</p>
       </div>
     </section>
   </div>
