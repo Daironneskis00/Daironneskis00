@@ -526,19 +526,5 @@
     formulario.scrollIntoView({ behavior: 'smooth' });
   });
 </script>
-  <script>
-  document.querySelector('a[href="#hogar"]').addEventListener('click', function(e) {
-    e.preventDefault();
-    const formulario = document.getElementById('formulario-hogar');
-    
-    if (formulario.style.display === 'none' || formulario.style.display === '') {
-      formulario.style.display = 'block';
-      formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      formulario.style.display = 'none';
-    }
-  });
-</script>
-
 </body>
 </html>
