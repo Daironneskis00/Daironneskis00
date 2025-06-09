@@ -26,6 +26,25 @@
       font-family: 'Montserrat', sans-serif;
       background: var(--blanco);
       color: var(--azul-oscuro);
+      <script>
+  // Al hacer clic en el submenú "Hogar", muestra el formulario
+  document.querySelector('a[href="#hogar"]').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // Oculta cualquier otro formulario visible si deseas (opcional)
+    document.querySelectorAll('.seguro').forEach(div => {
+      if (div.id !== 'hogar') div.style.display = 'none';
+    });
+
+    // Muestra el bloque de hogar
+    const hogarDiv = document.getElementById('hogar');
+    hogarDiv.style.display = hogarDiv.style.display === 'block' ? 'none' : 'block';
+
+    // Scroll suave hacia la sección
+    hogarDiv.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
     }
     header {
       background: var(--blanco);
