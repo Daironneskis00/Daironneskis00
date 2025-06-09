@@ -505,12 +505,16 @@
   </script>
   <script>
   function toggleFormularioHogar(event) {
-    event.preventDefault();
+    event.preventDefault(); // evita el salto automático por el ancla
     const formulario = document.getElementById('formulario-hogar');
+
     if (formulario.style.display === 'none' || formulario.style.display === '') {
       formulario.style.display = 'block';
+
+      // Espera a que se muestre y luego centra con scroll
       setTimeout(() => {
-        formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const offsetTop = formulario.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }, 100);
     } else {
       formulario.style.display = 'none';
