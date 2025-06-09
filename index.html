@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +19,7 @@
     header {
       background: var(--blanco);
       color: var(--azul-oscuro);
-      padding: 1.5rem;
+      padding: 1.2rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -30,20 +31,24 @@
     .logo-container {
       display: flex;
       align-items: center;
+      gap: 10px;
     }
     .logo-container img {
-      height: 80px;
-      margin-right: 20px;
+      height: 60px;
+      max-width: 100%;
+      margin-right: 8px;
     }
     .logo-text {
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: 700;
+      letter-spacing: .5px;
     }
     nav ul.menu {
       list-style: none;
       display: flex;
       margin: 0;
       padding: 0;
+      align-items: center;
     }
     nav ul.menu li {
       position: relative;
@@ -54,9 +59,13 @@
     nav ul.menu li a {
       color: var(--azul-oscuro);
       text-decoration: none;
-      padding: 1rem;
+      padding: 1rem 0.5rem;
       display: block;
       font-weight: 600;
+      transition: color .18s;
+    }
+    nav ul.menu li a:hover {
+      color: #195184;
     }
     nav ul.menu li:hover .submenu {
       display: block;
@@ -65,11 +74,13 @@
       display: none;
       position: absolute;
       top: 100%;
+      left: 0;
       background-color: var(--blanco);
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       border-radius: 0 0 8px 8px;
       overflow: hidden;
       z-index: 10;
+      min-width: 170px;
     }
     .submenu li a {
       color: var(--azul-oscuro);
@@ -78,6 +89,7 @@
     }
     .submenu li a:hover {
       background-color: #e8f0ff;
+      color: #0c3c60;
     }
     .submenu-form {
       display: none;
@@ -94,12 +106,14 @@
     nav ul.menu li:hover .submenu-form {
       display: block;
     }
-    .submenu-form input {
+    .submenu-form input, .submenu-form textarea {
       width: 100%;
       padding: 0.5rem;
       margin-bottom: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
     }
     .submenu-form button {
       width: 100%;
@@ -110,22 +124,24 @@
       border-radius: 4px;
       font-weight: 600;
       cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
     .submenu-form button:hover {
-      background-color: #0a2f4a;
+      background-color: #195184;
     }
     .hero {
       background: var(--blanco);
       color: var(--azul-oscuro);
-      padding: 5rem 2rem;
+      padding: 4rem 2rem 2rem 2rem;
       text-align: center;
     }
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       max-width: 800px;
       margin: auto;
     }
@@ -140,7 +156,7 @@
     }
     h2 {
       color: var(--azul-oscuro);
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       border-bottom: 2px solid #d0e3f0;
       padding-bottom: .4rem;
       margin-bottom: 1rem;
@@ -167,6 +183,147 @@
     .seguro h3 {
       margin-top: 0;
     }
+
+    /* ==== FOOTER PROFESIONAL ==== */
+    footer {
+      background: #0c3c60;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 4rem;
+      font-size: 1rem;
+      box-shadow: 0 -2px 12px rgba(44,60,96,0.08);
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+    .footer-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .footer-logo {
+      height: 54px;
+      margin-right: 10px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 5px 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .footer-contact a,
+    .footer-links a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover,
+    .footer-links a:hover {
+      color: #e0e81a;
+      text-decoration: none;
+    }
+    .whatsapp-btn img {
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
+    .footer-bottom {
+      border-top: 1px solid #274262;
+      text-align: center;
+      padding: 1rem 0 0.5rem 0;
+      font-size: 0.93rem;
+      color: #e2e7ee;
+      margin-top: 1rem;
+    }
+    @media (max-width: 900px) {
+      nav ul.menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 74px;
+        right: 2rem;
+        width: 220px;
+        box-shadow: 0 6px 24px rgba(30,50,90,0.08);
+        border-radius: 0 0 16px 16px;
+        padding-bottom: 1rem;
+        z-index: 200;
+      }
+      nav ul.menu.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+    /* Hamburguesa oculta en escritorio */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      margin-left: 1rem;
+    }
+    .menu-toggle span {
+      height: 4px;
+      width: 28px;
+      background: #0c3c60;
+      margin: 4px 0;
+      border-radius: 2px;
+      display: block;
+      transition: 0.3s;
+    }
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      .logo-text {
+        font-size: 1.2rem;
+      }
+      .container {
+        padding: 0 0.5rem;
+      }
+      .seguro {
+        padding: 0.7rem;
+      }
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      .footer-links {
+        align-items: center;
+        flex-direction: row;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .footer-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -174,6 +331,12 @@
     <div class="logo-container">
       <img src="logo.png" alt="Logo Dairon Neskis">
       <div class="logo-text">Dairon Neskis</div>
+    </div>
+    <!-- Hamburguesa para móvil/tablet -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <nav>
       <ul class="menu">
@@ -192,20 +355,19 @@
             <li><a href="#comunidades">Comunidades</a></li>
           </ul>
         </li>
-     <li class="dropdown">
-  <a href="#" onclick="return false;">Contacto ▾</a>
-  <div class="submenu-form">
-  <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
-  <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
-  <input type="text" name="Nombre" placeholder="Nombre completo" required>
-  <input type="email" name="Correo" placeholder="Correo electrónico" required>
-  <input type="tel" name="Teléfono" placeholder="Teléfono" required>
-  <textarea name="Motivo" placeholder="Motivo de la consulta" rows="3" required></textarea>
-  <button type="submit">Enviar</button>
-</form>
-    </form>
-  </div>
-</li>
+        <li class="dropdown">
+          <a href="#" onclick="return false;">Contacto ▾</a>
+          <div class="submenu-form">
+            <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
+              <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
+              <input type="text" name="Nombre" placeholder="Nombre completo" required>
+              <input type="email" name="Correo" placeholder="Correo electrónico" required>
+              <input type="tel" name="Teléfono" placeholder="Teléfono" required>
+              <textarea name="Motivo" placeholder="Motivo de la consulta" rows="3" required></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -217,14 +379,14 @@
 
   <div class="container">
     <section id="empresa" class="section">
-  <h2>¿Quiénes Somos?</h2>
-  <p><strong>Dairon Neskis</strong> es una entidad especializada en la <strong>administración integral de comunidades de propietarios y pequeñas empresas (PYMES)</strong>. Nuestro compromiso es ofrecer soluciones eficientes, transparentes y personalizadas que garanticen la tranquilidad de propietarios y gestores. Brindamos un servicio completo en aspectos técnicos, jurídicos y económicos, con una atención cercana y profesional.</p>
+      <h2>¿Quiénes Somos?</h2>
+      <p><strong>Dairon Neskis</strong> es una entidad especializada en la <strong>administración integral de comunidades de propietarios y pequeñas empresas (PYMES)</strong>. Nuestro compromiso es ofrecer soluciones eficientes, transparentes y personalizadas que garanticen la tranquilidad de propietarios y gestores. Brindamos un servicio completo en aspectos técnicos, jurídicos y económicos, con una atención cercana y profesional.</p>
 
-  <p><strong>También</strong> actúa de forma independiente como <strong>agente exclusivo de Ocaso Seguros</strong>, una de las compañías aseguradoras más reconocidas de España. En este rol, asesoramos de forma personalizada a cada cliente, ofreciendo seguros de decesos, hogar, salud, vida, accidentes, ahorro, viajes, comunidades y empresas. Nuestro objetivo es ayudarte a proteger lo que más valoras, con productos claros, eficientes y adaptados a tus necesidades.</p>
+      <p><strong>También</strong> actúa de forma independiente como <strong>agente exclusivo de Ocaso Seguros</strong>, una de las compañías aseguradoras más reconocidas de España. En este rol, asesoramos de forma personalizada a cada cliente, ofreciendo seguros de decesos, hogar, salud, vida, accidentes, ahorro, viajes, comunidades y empresas. Nuestro objetivo es ayudarte a proteger lo que más valoras, con productos claros, eficientes y adaptados a tus necesidades.</p>
 
-  <p><em>Dos líneas de servicio, una misma vocación de excelencia.</em><br>
-  Tanto en la gestión comunitaria como en la protección personal y empresarial, <strong>Dairon Neskis</strong> representa confianza, profesionalidad y cercanía.</p>
-</section>
+      <p><em>Dos líneas de servicio, una misma vocación de excelencia.</em><br>
+      Tanto en la gestión comunitaria como en la protección personal y empresarial, <strong>Dairon Neskis</strong> representa confianza, profesionalidad y cercanía.</p>
+    </section>
 
     <section id="seguros" class="section">
       <h2>Seguros que Ofrecemos</h2>
@@ -275,5 +437,48 @@
       </div>
     </section>
   </div>
+
+  <!-- FOOTER PROFESIONAL -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="logo.png" alt="Logo Dairon Neskis" class="footer-logo">
+        <div class="footer-contact">
+          <div><strong>Email:</strong> <a href="mailto:neskisgs@gmail.com">neskisgs@gmail.com</a></div>
+          <div><strong>Tel:</strong> <a href="tel:+34684357021">684 357 021</a></div>
+          <div>
+            <a href="https://wa.me/34684357021" class="whatsapp-btn" target="_blank" title="Escríbenos por WhatsApp">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="26" style="vertical-align: middle;">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#empresa">Empresa</a>
+        <a href="#seguros">Seguros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://www.ocaso.es/es" target="_blank">Ocaso Seguros</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Dairon Neskis · Todos los derechos reservados
+    </div>
+  </footer>
+  <!-- FIN FOOTER -->
+
+  <!-- Script menú hamburguesa -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('nav ul.menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+    document.querySelectorAll('nav ul.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html>
