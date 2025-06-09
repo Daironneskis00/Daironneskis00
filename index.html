@@ -503,17 +503,18 @@
       });
     });
   </script>
-  <script>
+ <script>
   function toggleFormularioHogar(event) {
-    event.preventDefault(); // evita el salto automático por el ancla
+    event.preventDefault(); // evita el salto automático
     const formulario = document.getElementById('formulario-hogar');
+    const bloqueHogar = document.getElementById('hogar');
 
     if (formulario.style.display === 'none' || formulario.style.display === '') {
       formulario.style.display = 'block';
 
-      // Espera a que se muestre y luego centra con scroll
+      // Hacer scroll al bloque completo del seguro de hogar
       setTimeout(() => {
-        const offsetTop = formulario.getBoundingClientRect().top + window.scrollY - 100;
+        const offsetTop = bloqueHogar.getBoundingClientRect().top + window.scrollY - 100;
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }, 100);
     } else {
@@ -528,5 +529,6 @@
     }
   });
 </script>
+
 </body>
 </html>
