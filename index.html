@@ -401,16 +401,16 @@
 
     <section id="seguros" class="section">
       <h2>Seguros que Ofrecemos</h2>
-      <div id="hogar" class="seguro">
+     <div id="hogar" class="seguro">
   <h3>Seguro de Hogar</h3>
   <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
 
-  <!-- Formulario oculto por defecto -->
+  <!-- Formulario oculto inicialmente -->
   <div id="formulario-hogar" style="display: none; margin-top: 1rem;">
     <h4>Solicita tu Estudio Personalizado</h4>
     <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
       <input type="hidden" name="_next" value="https://daironneskis00.github.io/#gracias">
-      <input type="hidden" name="_subject" value="Seguro de hogar">
+      <input type="hidden" name="_subject" value="Estudio Seguro de Hogar">
 
       <input type="text" name="Nombre" placeholder="Nombre completo" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
 
@@ -426,7 +426,6 @@
     </form>
   </div>
 </div>
-
       <div id="decesos" class="seguro">
         <h3>Seguro de Decesos</h3>
         <p>Tranquilidad para tus seres queridos. Cubre los gastos y gestiones necesarios en caso de fallecimiento.</p>
@@ -527,5 +526,19 @@
     formulario.scrollIntoView({ behavior: 'smooth' });
   });
 </script>
+  <script>
+  document.querySelector('a[href="#hogar"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    const formulario = document.getElementById('formulario-hogar');
+    
+    if (formulario.style.display === 'none' || formulario.style.display === '') {
+      formulario.style.display = 'block';
+      formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      formulario.style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html>
