@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dairon Neskis | Soluciones Integrales en Administración y Seguros</title>
+  <title>Dairon Neskis | Soluciones Integrales en Gestión y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     .section {
@@ -26,25 +26,6 @@
       font-family: 'Montserrat', sans-serif;
       background: var(--blanco);
       color: var(--azul-oscuro);
-      <script>
-  // Al hacer clic en el submenú "Hogar", muestra el formulario
-  document.querySelector('a[href="#hogar"]').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    // Oculta cualquier otro formulario visible si deseas (opcional)
-    document.querySelectorAll('.seguro').forEach(div => {
-      if (div.id !== 'hogar') div.style.display = 'none';
-    });
-
-    // Muestra el bloque de hogar
-    const hogarDiv = document.getElementById('hogar');
-    hogarDiv.style.display = hogarDiv.style.display === 'block' ? 'none' : 'block';
-
-    // Scroll suave hacia la sección
-    hogarDiv.scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
-
     }
     header {
       background: var(--blanco);
@@ -421,19 +402,9 @@
     <section id="seguros" class="section">
       <h2>Seguros que Ofrecemos</h2>
       <div id="hogar" class="seguro">
-  <div id="hogar" class="seguro" style="display: none;">
-  <h3>Seguro de Hogar</h3>
-  <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
-  <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST" style="margin-top: 1rem;">
-    <input type="hidden" name="_next" value="https://daironneskis00.github.io/#gracias">
-    <input type="hidden" name="_subject" value="Solicitud Seguro de Hogar">
-    <input type="text" name="Nombre" placeholder="Nombre completo" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-    <input type="tel" name="Teléfono" placeholder="Teléfono" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-    <input type="text" name="Dirección" placeholder="Dirección" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-    <input type="text" name="Pago_actual" placeholder="¿Cuánto paga actualmente?" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-    <button type="submit" style="width:100%;padding:0.6rem;background:#0c3c60;color:white;border:none;border-radius:6px;font-weight:600;">Solicitar Asesoramiento</button>
-  </form>
-</div>
+        <h3>Seguro de Hogar</h3>
+        <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
+      </div>
       <div id="decesos" class="seguro">
         <h3>Seguro de Decesos</h3>
         <p>Tranquilidad para tus seres queridos. Cubre los gastos y gestiones necesarios en caso de fallecimiento.</p>
