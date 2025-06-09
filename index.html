@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dairon Neskis | Soluciones Integrales en Administración y Seguros</title>
+  <title>Dairon Neskis | Soluciones Integrales en Gestión y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     .section {
@@ -401,31 +401,10 @@
 
     <section id="seguros" class="section">
       <h2>Seguros que Ofrecemos</h2>
-     <div id="hogar" class="seguro">
-  <h3>Seguro de Hogar</h3>
-  <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
-
-  <!-- Formulario oculto inicialmente -->
-  <div id="formulario-hogar" style="display: none; margin-top: 1rem;">
-    <h4>Solicita tu Estudio Personalizado</h4>
-    <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
-      <input type="hidden" name="_next" value="https://daironneskis00.github.io/#gracias">
-      <input type="hidden" name="_subject" value="Estudio Seguro de Hogar">
-
-      <input type="text" name="Nombre" placeholder="Nombre completo" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-
-      <input type="tel" name="Teléfono" placeholder="Teléfono" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-
-      <input type="text" name="Dirección" placeholder="Dirección de la vivienda" required style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-
-      <input type="text" name="Pago_actual" placeholder="¿Cuánto pagas actualmente?" style="width:100%;margin-bottom:0.5rem;padding:0.5rem;">
-
-      <textarea name="Comentarios" placeholder="¿Hay algo más que debamos saber?" rows="3" style="width:100%;margin-bottom:0.5rem;padding:0.5rem;"></textarea>
-
-      <button type="submit" style="width:100%;padding:0.6rem;background:#0c3c60;color:white;border:none;border-radius:6px;font-weight:600;">Enviar Estudio</button>
-    </form>
-  </div>
-</div>
+      <div id="hogar" class="seguro">
+        <h3>Seguro de Hogar</h3>
+        <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
+      </div>
       <div id="decesos" class="seguro">
         <h3>Seguro de Decesos</h3>
         <p>Tranquilidad para tus seres queridos. Cubre los gastos y gestiones necesarios en caso de fallecimiento.</p>
@@ -511,33 +490,6 @@
         menu.classList.remove('show');
       });
     });
-    
   </script>
-  <script>
-  document.querySelector('a[href="#hogar"]').addEventListener('click', function(e) {
-    e.preventDefault();
-    const formulario = document.getElementById('formulario-hogar');
-
-    // Mostrar el formulario si está oculto, o hacer scroll si ya está visible
-    if (formulario.style.display === 'none') {
-      formulario.style.display = 'block';
-    }
-
-    formulario.scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
-  <script>
-  document.querySelector('a[href="#hogar"]').addEventListener('click', function(e) {
-    e.preventDefault();
-    const formulario = document.getElementById('formulario-hogar');
-    
-    if (formulario.style.display === 'none' || formulario.style.display === '') {
-      formulario.style.display = 'block';
-      formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      formulario.style.display = 'none';
-    }
-  });
-</script>
 </body>
 </html>
