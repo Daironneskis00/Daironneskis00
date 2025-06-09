@@ -402,6 +402,19 @@
     <section id="seguros" class="section">
       <h2>Seguros que Ofrecemos</h2>
       <div id="hogar" class="seguro">
+        <div id="formulario-hogar" style="display:none; margin-top: 1rem;">
+  <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://daironneskis00.github.io/#gracias">
+    <input type="hidden" name="_subject" value="Estudio Seguro de Hogar">
+    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+    <input type="tel" name="Teléfono" placeholder="Teléfono" required>
+    <input type="text" name="Dirección" placeholder="Dirección de la vivienda" required>
+    <input type="text" name="Pago_actual" placeholder="¿Cuánto pagas actualmente?">
+    <textarea name="Comentarios" placeholder="¿Algo más que debamos saber?" rows="3"></textarea>
+    <button type="submit">Enviar Estudio</button>
+  </form>
+</div>
+
         <h3>Seguro de Hogar</h3>
         <p>Protección completa para tu vivienda y tus bienes frente a imprevistos como incendios, robos o daños por agua.</p>
       </div>
@@ -491,5 +504,26 @@
       });
     });
   </script>
+  <script>
+  function toggleFormularioHogar(event) {
+    event.preventDefault();
+    const formulario = document.getElementById('formulario-hogar');
+    if (formulario.style.display === 'none' || formulario.style.display === '') {
+      formulario.style.display = 'block';
+      setTimeout(() => {
+        formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else {
+      formulario.style.display = 'none';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const hogarLink = document.querySelector(".submenu li a[href='#hogar']");
+    if (hogarLink) {
+      hogarLink.addEventListener("click", toggleFormularioHogar);
+    }
+  });
+</script>
 </body>
 </html>
