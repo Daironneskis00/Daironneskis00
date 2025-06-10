@@ -89,21 +89,35 @@
   background-color: var(--blanco);
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   border-radius: 0 0 8px 8px;
-  overflow: hidden;
   z-index: 10;
   min-width: 170px;
   max-height: 400px;
   overflow-y: auto;
   pointer-events: auto;
 }
-    .submenu li a {
-      color: var(--azul-oscuro);
-      padding: 0.8rem 1.2rem;
-      white-space: nowrap;
-    }
-    .submenu li a:hover {
-      background-color: #e8f0ff;
-      color: #0c3c60;
+
+.submenu li a {
+  color: var(--azul-oscuro);
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.submenu li a:hover {
+  background-color: #e8f0ff;
+  color: #0c3c60;
+}
+
+/* Para pantallas muy bajas (como móviles en horizontal) */
+@media (max-height: 500px) {
+  .submenu {
+    max-height: 200px;
+  }
+}
+    
     }
     .submenu-form {
       display: none;
