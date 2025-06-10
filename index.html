@@ -335,6 +335,30 @@
         gap: 1rem;
       }
     }
+    .titulo-escribir {
+  opacity: 0;
+  animation: aparecerTitulo 1.5s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.texto-escribir {
+  opacity: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow: hidden;
+  display: inline-block;
+  animation: escribir 4s steps(70, end) forwards;
+  animation-delay: 3s;
+}
+
+@keyframes aparecerTitulo {
+  to { opacity: 1; }
+}
+
+@keyframes escribir {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1; }
+}
   </style>
 </head>
 <body>
@@ -393,15 +417,15 @@
 
   <div class="container">
     <section id="empresa" class="section">
-      <h2>¿Quiénes Somos?</h2>
-      <p><strong>Dairon Neskis</strong> es una entidad especializada en la <strong>administración integral de comunidades de propietarios y pequeñas empresas (PYMES)</strong>. Nuestro compromiso es ofrecer soluciones eficientes, transparentes y personalizadas que garanticen la tranquilidad de propietarios y gestores. Brindamos un servicio completo en aspectos técnicos, jurídicos y económicos, con una atención cercana y profesional.</p>
+  <h2 class="titulo-escribir">¿Quiénes Somos?</h2>
+  <p class="texto-escribir">
+    <strong>Dairon Neskis</strong> es una entidad especializada en la <strong>administración integral de comunidades de propietarios y pequeñas empresas (PYMES)</strong>. Nuestro compromiso es ofrecer soluciones eficientes, transparentes y personalizadas que garanticen la tranquilidad de propietarios y gestores. Brindamos un servicio completo en aspectos técnicos, jurídicos y económicos, con una atención cercana y profesional.<br><br>
 
-      <p><strong>También</strong> actúa de forma independiente como <strong>agente exclusivo de Ocaso Seguros</strong>, una de las compañías aseguradoras más reconocidas de España. En este rol, asesoramos de forma personalizada a cada cliente, ofreciendo seguros de decesos, hogar, salud, vida, accidentes, ahorro, viajes, comunidades y empresas. Nuestro objetivo es ayudarte a proteger lo que más valoras, con productos claros, eficientes y adaptados a tus necesidades.</p>
+    <strong>También</strong> actúa de forma independiente como <strong>agente exclusivo de Ocaso Seguros</strong>, una de las compañías aseguradoras más reconocidas de España. En este rol, asesoramos de forma personalizada a cada cliente, ofreciendo seguros de decesos, hogar, salud, vida, accidentes, ahorro, viajes, comunidades y empresas. Nuestro objetivo es ayudarte a proteger lo que más valoras, con productos claros, eficientes y adaptados a tus necesidades.<br><br>
 
-      <p><em>Dos líneas de servicio, una misma vocación de excelencia.</em><br>
-      Tanto en la gestión comunitaria como en la protección personal y empresarial, <strong>Dairon Neskis</strong> representa confianza, profesionalidad y cercanía.</p>
-    </section>
-
+    <em>Dos líneas de servicio, una misma vocación de excelencia.</em> Tanto en la gestión comunitaria como en la protección personal y empresarial, <strong>Dairon Neskis</strong> representa confianza, profesionalidad y cercanía.
+  </p>
+</section>
     <section id="seguros" class="section">
       <h2>Seguros que Ofrecemos</h2>
       <div id="hogar" class="seguro">
