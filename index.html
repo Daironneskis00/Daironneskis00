@@ -81,18 +81,21 @@
     nav ul.menu li:hover .submenu {
       display: block;
     }
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: var(--blanco);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      border-radius: 0 0 8px 8px;
-      overflow: hidden;
-      z-index: 10;
-      min-width: 170px;
-    }
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--blanco);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  z-index: 10;
+  min-width: 170px;
+  max-height: 400px;
+  overflow-y: auto;
+  pointer-events: auto;
+}
     .submenu li a {
       color: var(--azul-oscuro);
       padding: 0.8rem 1.2rem;
