@@ -400,14 +400,32 @@
         <li class="dropdown">
           <a href="#" onclick="return false;">Contacto ▾</a>
           <div class="submenu-form">
-            <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
-              <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
-              <input type="text" name="Nombre" placeholder="Nombre completo" required>
-              <input type="email" name="Correo" placeholder="Correo electrónico" required>
-              <input type="tel" name="Teléfono" placeholder="Teléfono" required>
-              <textarea name="Motivo" placeholder="Motivo de la consulta" rows="3" required></textarea>
-              <button type="submit">Enviar</button>
-            </form>
+            <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST" class="formulario-profesional">
+  <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
+  <input type="hidden" name="_subject" value="Clientes Contacto">
+
+  <div class="form-row">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="Nombre" required>
+  </div>
+
+  <div class="form-row">
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="Correo" required>
+  </div>
+
+  <div class="form-row">
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="Teléfono" required>
+  </div>
+
+  <div class="form-row">
+    <label for="motivo">Motivo de la consulta:</label>
+    <textarea id="motivo" name="Motivo" rows="4" required></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
           </div>
         </li>
       </ul>
@@ -439,7 +457,7 @@
            <div id="formulario-hogar">
   <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST" class="formulario-profesional">
   <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
-  <input type="hidden" name="_subject" value="Estudio Seguro">
+  <input type="hidden" name="_subject" value="Seguro hogar>
 
   <div class="form-row">
     <label>Nombre completo:</label>
@@ -500,7 +518,7 @@
       <div id="formulario-empresas" style="display: none; margin-top: 1rem;">
   <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST" class="formulario-profesional">
   <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
-  <input type="hidden" name="_subject" value="Estudio Seguro">
+  <input type="hidden" name="_subject" value="Seguro empresa">
 
   <div class="form-row">
     <label>Nombre completo:</label>
@@ -537,7 +555,7 @@
       <div id="formulario-comunidades" style="display: none; margin-top: 1rem;">
   <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST" class="formulario-profesional">
   <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
-  <input type="hidden" name="_subject" value="Estudio Seguro">
+  <input type="hidden" name="_subject" value="Seguro comunidad ">
 
   <div class="form-row">
     <label>Nombre completo:</label>
