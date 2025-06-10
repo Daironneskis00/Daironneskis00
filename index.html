@@ -447,10 +447,39 @@
         <h3>Seguro para Empresas</h3>
         <p>Protección para negocios frente a riesgos laborales, daños materiales, responsabilidad civil y otros.</p>
       </div>
+      <div id="formulario-empresas" style="display: none; margin-top: 1rem;">
+  <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
+    <input type="hidden" name="_subject" value="Estudio Seguro para Empresa">
+
+    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+    <input type="tel" name="Teléfono" placeholder="Teléfono" required>
+    <input type="text" name="Nombre_empresa" placeholder="Nombre de la empresa" required>
+    <input type="text" name="Dirección" placeholder="Dirección del local" required>
+    <input type="text" name="Pago_actual" placeholder="¿Cuánto pagas actualmente?">
+    <textarea name="Comentarios" placeholder="¿Algo más que debamos saber?" rows="3"></textarea>
+
+    <button type="submit">Enviar Estudio</button>
+  </form>
+</div>
       <div id="comunidades" class="seguro">
         <h3>Seguro para Comunidades</h3>
         <p>Cubre los riesgos comunes de edificios y comunidades de vecinos, como incendios, agua o ascensores.</p>
       </div>
+      <div id="formulario-comunidades" style="display: none; margin-top: 1rem;">
+  <form action="https://formsubmit.co/neskisgs@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://daironneskis00.github.io/Daironneskis00/">
+    <input type="hidden" name="_subject" value="Estudio Seguro para Comunidad">
+
+    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+    <input type="tel" name="Teléfono" placeholder="Teléfono" required>
+    <input type="text" name="Dirección_comunidad" placeholder="Dirección de la comunidad" required>
+    <input type="text" name="Pago_actual" placeholder="¿Cuánto paga actualmente la comunidad?">
+    <textarea name="Comentarios" placeholder="¿Algo más que debamos saber?" rows="3"></textarea>
+
+    <button type="submit">Enviar Estudio</button>
+  </form>
+</div>
     </section>
 
     <section id="contacto" class="section">
@@ -530,6 +559,39 @@
       hogarLink.addEventListener("click", toggleFormularioHogar);
     }
   });
+   function toggleFormularioEmpresas(event) {
+  event.preventDefault();
+  const formulario = document.getElementById('formulario-empresas');
+  const section = document.getElementById('empresas');
+
+  formulario.style.display = (formulario.style.display === 'block') ? 'none' : 'block';
+  if (formulario.style.display === 'block') {
+    setTimeout(() => {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+}
+
+function toggleFormularioComunidades(event) {
+  event.preventDefault();
+  const formulario = document.getElementById('formulario-comunidades');
+  const section = document.getElementById('comunidades');
+
+  formulario.style.display = (formulario.style.display === 'block') ? 'none' : 'block';
+  if (formulario.style.display === 'block') {
+    setTimeout(() => {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const linkEmpresas = document.querySelector(".submenu li a[href='#empresas']");
+  const linkComunidades = document.querySelector(".submenu li a[href='#comunidades']");
+
+  if (linkEmpresas) linkEmpresas.addEventListener("click", toggleFormularioEmpresas);
+  if (linkComunidades) linkComunidades.addEventListener("click", toggleFormularioComunidades);
+});
 </script>
 
 </body>
