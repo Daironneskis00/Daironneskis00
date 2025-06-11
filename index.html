@@ -6,36 +6,18 @@
   <title>Dairon Neskis | Soluciones Integrales en Administración y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
- .dropdown {
-      position: relative;
-    }
-    .submenu 
-    {
-      display: none;
-      position: absolute;
-      left: 50%;
-      top: 100%;
-      transform: translateX(-50%);
-      background: #fff;
-      min-width: 180px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border-radius: 0.7rem;
-      z-index: 999;
-      padding: 0.5rem 0;
-    }
-    .dropdown:hover > .submenu,
-    .dropdown:focus-within > .submenu {
-      display: block;
-    }
-    #hogar, #decesos, #vida, #salud, #accidentes, #ahorro, #viajes, #empresas, #comunidades {
-  scroll-margin-top: 150px !important;
+    .section {
+  scroll-margin-top: 100px; /* para dejar espacio debajo del header sticky */
 }
 
-}
-  html {
+    html {
   scroll-behavior: smooth;
 }
-:root {
+
+.seguro {
+  scroll-margin-top: 100px;
+}
+    :root {
       --azul-oscuro: #0c3c60;
       --blanco: #ffffff;
     }
@@ -63,7 +45,7 @@
       gap: 10px;
     }
     .logo-container img {
-      height: 100px;
+      height: 60px;
       max-width: 100%;
       margin-right: 8px;
     }
@@ -384,10 +366,10 @@
 </head>
 <body>
   <header>
-  <a href="https://daironneskis00.github.io/Daironneskis00/" class="logo-container" style="text-decoration: none;">
-  <img src="logo.png" alt="Logo Dairon Neskis">
-  <div class="logo-text">Dairon Neskis</div>
-</a>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Dairon Neskis">
+      <div class="logo-text">Dairon Neskis</div>
+    </div>
     <!-- Hamburguesa para móvil/tablet -->
     <div class="menu-toggle" id="menu-toggle">
       <span></span>
@@ -396,25 +378,26 @@
     </div>
     <nav>
       <ul class="menu">
-     <li><a href="area_cliente/index.html">Área de Cliente</a></li>
+       <li><a href="Daironneskis00/area_cliente/index.html">Área de Cliente</a></li>
        <li><a href="#empresa">La Empresa</a></li> 
         <li>
-  <a href="administracion.html">Administración</a>
+  <a href="administracion.html" target="_blank">Administración</a>
 </li>
         <li class="dropdown">
   <a href="#seguros">Seguros ▾</a>
   <ul class="submenu">
-    <a href="#ancla-hogar">Hogar</a>
-<a href="#ancla-decesos">Decesos</a>
-<a href="#ancla-vida">Vida</a>
-<a href="#ancla-salud">Salud</a>
-<a href="#ancla-accidentes">Accidentes</a>
-<a href="#ancla-ahorro">Ahorro</a>
-<a href="#ancla-viajes">Viajes</a>
-<a href="#ancla-empresas">Empresas</a>
-<a href="#ancla-comunidades">Comunidades</a>
+    <li><a href="#hogar">Hogar</a></li>
+    <li><a href="#decesos">Decesos</a></li>
+    <li><a href="#vida">Vida</a></li>
+    <li><a href="#salud">Salud</a></li>
+    <li><a href="#accidentes">Accidentes</a></li>
+    <li><a href="#ahorro">Ahorro</a></li>
+    <li><a href="#viajes">Viajes</a></li>
+    <li><a href="#empresas">Empresas</a></li>
+    <li><a href="#comunidades">Comunidades</a></li>
   </ul>
 </li>
+        </li>
         <li class="dropdown">
           <a href="#" onclick="return false;">Contacto ▾</a>
           <div class="submenu-form">
@@ -636,7 +619,7 @@
         <a href="#empresa">Empresa</a>
         <a href="#seguros">Seguros</a>
         <a href="#contacto">Contacto</a>
-        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="aviso-legal.html" target="_blank">Aviso Legal</a>
         <a href="https://www.ocaso.es/es" target="_blank">Ocaso Seguros</a>
       </div>
     </div>
