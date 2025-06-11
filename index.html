@@ -6,6 +6,24 @@
   <title>Dairon Neskis | Soluciones Integrales en Administración y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    button.enviar-boton {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button.enviar-boton:hover {
+  background-color: #195184;
+}
+
     .section {
   scroll-margin-top: 80px; /* para dejar espacio debajo del header sticky */
 }
@@ -423,8 +441,7 @@
     <label for="motivo">Motivo de la consulta:</label>
     <textarea id="motivo" name="Motivo" rows="4" required></textarea>
   </div>
-
-  <button type="submit">Enviar</button>
+ <button type="submit" class="enviar-boton">Enviar Estudio</button>
 </form>
           </div>
         </li>
@@ -483,8 +500,7 @@
         <label for="comentarios-hogar">Comentarios adicionales:</label>
         <textarea id="comentarios-hogar" name="Comentarios" rows="3"></textarea>
       </div>
-
-      <button type="submit">Enviar</button>
+<button type="submit" class="enviar-boton">Enviar Estudio</button>
     </form>
   </div>
 </div>
@@ -583,8 +599,7 @@
     <label>Comentarios adicionales:</label>
     <textarea name="Comentarios" rows="3"></textarea>
   </div>
-
-  <button type="submit">Enviar Estudio</button>
+ <button type="submit" class="enviar-boton">Enviar Estudio</button>
 </form>
 </div>
     </section>
