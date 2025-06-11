@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso Intranet | Dairon Neskis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Intranet Privada</h1>
+    <input type="password" id="password" placeholder="Introduce la contraseña">
+    <button onclick="verificar()">Entrar</button>
+    <p id="mensaje-error"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- panel.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel Privado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bienvenido a tu comunidad</h1>
+    <ul style="text-align:left;">
+      <li><a href="https://drive.google.com/tu-archivo-estatutos" target="_blank">📄 Estatutos de la comunidad</a></li>
+      <li><a href="https://drive.google.com/acta-abril2024" target="_blank">📝 Acta abril 2024</a></li>
+      <li><a href="https://drive.google.com/cuotas-actuales" target="_blank">💰 Cuotas actuales</a></li>
+      <li><a href="https://formsubmit.co/neskisgs@gmail.com" target="_blank">📬 Reportar incidencia</a></li>
+    </ul>
+  </div>
+</body>
+</html>
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f6fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+input[type="password"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0c3c60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #105a8c;
+}
+
+#mensaje-error {
+  color: red;
+  margin-top: 10px;
+}
+// script.js
+function verificar() {
+  const password = document.getElementById("password").value;
+  const claveCorrecta = "comunidad2024"; // Aquí puedes cambiar la contraseña
+
+  if (password === claveCorrecta) {
+    window.location.href = "panel.html";
+  } else {
+    document.getElementById("mensaje-error").textContent = "Contraseña incorrecta.";
+  }
+}
