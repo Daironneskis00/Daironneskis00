@@ -6,6 +6,26 @@
   <title>Dairon Neskis | Soluciones Integrales en Administración y Seguros</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+     .dropdown {
+      position: relative;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      background: #fff;
+      min-width: 180px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 0.7rem;
+      z-index: 999;
+      padding: 0.5rem 0;
+    }
+    .dropdown:hover > .submenu,
+    .dropdown:focus-within > .submenu {
+      display: block;
+    }
     .section {
   scroll-margin-top: 100px; /* para dejar espacio debajo del header sticky */
 }
@@ -391,7 +411,7 @@
     <li><a href="#vida">Vida</a></li>
     <li><a href="salud">Salud</a></li>
     <li><a href="#accidentes">Accidentes</a></li>
-    <li><a href="#ahorro"></a></li>
+    <li><a href="#ahorro">Ahorro</a></li>
     <li><a href="#viajes">Viajes</a></li>
     <li><a href="#empresas">Empresas</a></li>
     <li><a href="#comunidades">Comunidades</a></li>
