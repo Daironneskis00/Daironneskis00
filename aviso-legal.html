@@ -11,51 +11,55 @@
       --azul-claro: #d0e3f0;
       --blanco: #ffffff;
     }
-.logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--blanco);
+      color: var(--azul-oscuro);
+      margin: 0;
+      padding: 0;
     }
-    .logo-container img {
-      height: 60px;
-    }
-    .logo-text {
-      font-size: 1.7rem;
-      font-weight: 700;
-    }
+
     .container {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
     }
+
     h1 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
-      text-align: center;
+      border-bottom: 2px solid var(--azul-claro);
+      padding-bottom: 0.5rem;
     }
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      color: #0c3c60;
-    }
+
     p {
-      font-size: 1.1rem;
       line-height: 1.6;
+      margin-bottom: 1.2rem;
     }
+
     footer {
-      background: #0c3c60;
-      color: #ffffff;
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 1.5rem 1rem;
       margin-top: 3rem;
     }
-  </style>
-</head>
-<body>
-  <header>
-  <a href="https://daironneskis00.github.io/Daironneskis00/" class="logo-container" style="text-decoration: none;">
-  <img src="logo.png" alt="Logo Dairon Neskis">
-  <div class="logo-text">Dairon Neskis</div>
+
+    footer h4 {
+      margin: 0 0 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    footer p, footer a {
+      color: var(--blanco);
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
