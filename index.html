@@ -404,7 +404,7 @@ button.enviar-boton:hover {
     <nav>
       <ul class="menu">
      <li><a href="area_cliente/index.html">Área de Cliente</a></li>
-       <li><a href="#empresa">La Empresa</a></li> 
+        <li><a href="#" onclick="scrollEmpresa()">La Empresa</a></li>
         <li>
   <a href="administracion.html">Administración</a>
 </li>
@@ -720,6 +720,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (linkEmpresas) linkEmpresas.addEventListener("click", toggleFormularioEmpresas);
   if (linkComunidades) linkComunidades.addEventListener("click", toggleFormularioComunidades);
 });
+</script>
+<script>
+  function scrollEmpresa() {
+    const destino = document.querySelector('#empresa h2');
+    if (destino) {
+      const offset = destino.getBoundingClientRect().top + window.scrollY - 140; // ajusta al header
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+    // Cierra menú si está abierto (para móvil)
+    const menu = document.querySelector('nav ul.menu');
+    if (menu.classList.contains('show')) {
+      menu.classList.remove('show');
+    }
+  }
 </script>
 
 </body>
